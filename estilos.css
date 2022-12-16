@@ -7,13 +7,13 @@
 
 
 body::-webkit-scrollbar{
-    background-color: rgb(53, 53, 53);
+    background-color: rgb(14, 10, 60);
     width: 12px;
 }
 
 ::-webkit-scrollbar-thumb{
     border-radius: 50px;
-    background-color: rgba(229, 234, 253, 0.616);
+    background-color: yellow;
 }
 
 /*esta es la parte de header*/
@@ -32,14 +32,17 @@ header{
 }
 
 .banner i{
-    background-color: black;
-    border-radius: 15px 0px 15px 0px;
+    background-color: yellow;
+    border-radius: 50px 0px 40px 0px;
+    color: black;
+    font-weight: 900;
 }
 
 .banner h1{
     color: white;
     padding: 10px;
     font-size: 40px;
+    font-family: monospace;
     animation-name: tutu;
     animation-duration: 1s;
     animation-iteration-count: infinite;
@@ -65,12 +68,6 @@ header{
     left: 50%;
 }
 
-@media screen and (max-width: 1255px){
-    .menu{
-        display: none;
-    }
-}
-
 .menu a{
     text-decoration: none;
     color: white;
@@ -83,6 +80,75 @@ header{
     padding: 20px;
     border-radius: 40px 0px 40px 0px;
 }
+
+.m{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 74%;
+    top: 36px;
+    font-family: sans-serif;
+}
+
+.m a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: none;
+}
+
+
+summary{
+    display: flex;
+    color: white;
+    font-family: sans-serif;
+    cursor: pointer;
+    border: 1px solid white;
+    padding: 10px 12px 10px 12px;
+    border-radius: 20px 0px 20px 0px;
+}
+
+
+details{
+    display: none;
+}
+
+.menucuadro{
+    width: 100%;
+    display: flex;
+    position: fixed;
+    background-color:rgb(14, 10, 60);
+    text-align: center;
+    bottom: 0px;
+    left: 0;
+    padding: 12px;
+}
+
+.menucuadro a{
+    padding: 10px;
+    margin: 5px;
+    text-shadow: 2px 2px 2px yellow;
+}
+
+
+@media screen and (max-width: 1255px){
+    .menu{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 1255px){
+    .m a{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1255px){
+    details{
+        display: block;
+    }
+}
+
 
 
 
@@ -104,9 +170,8 @@ article a{
     border: 1px solid rgb(252, 252, 252);
     box-shadow: 0px 0px 20px black;
     border-radius: 100px 0px 100px 0px;
-    background-color: white;
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 22px;
     font-weight: bolder;
     margin: 10px;
@@ -159,22 +224,6 @@ span{
 
 @keyframes blink{
     50%{ border-color: transparent; }
-}
-
-picture{
-    display: inline-block;
-    filter: drop-shadow(
-        0
-        0
-        12px
-        yellow
-    );
-}
-
-picture img{
-    max-width: 550px;
-    mix-blend-mode: multiply;
-    filter: grayscale(100%);
 }
 
 
@@ -365,5 +414,112 @@ picture img{
     }
     100%{
         transform: translateX(-1000%);
+    }
+}
+
+
+/*responsivo del article*/
+
+@media screen and (max-width: 710px){
+    .lema p{
+        font-size: 22px;
+        margin: 20px 0px 0px 0px;
+        font-weight: 500;
+        font-family: monospace;
+        color: rgb(179, 179, 179);
+    }
+}
+
+@media screen and (max-width: 710px){
+    .op{
+        width: 320px;
+        position: relative;
+        top: 0;
+        border-radius: 100% 100% 0% 0%;
+        filter: drop-shadow(
+            0
+            0
+            12px
+            yellow
+        );
+        animation-name: pao;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+    .texto{
+        position: absolute;
+        top: 27%;
+        left: 14%;
+        transform: translate(-50%,-50%);
+        border-radius: 10px;
+        width: 200px;
+        filter: drop-shadow(
+            0
+            0
+            12px
+            rgb(0, 0, 0)
+        );
+    }
+    
+    .une{
+        position: absolute;
+        top: 27%;
+        left: 92%;
+        transform: translate(-50%,-50%);
+        border-radius: 10px;
+        width: 280px;
+        filter: drop-shadow(
+            0
+            0
+            12px
+            rgb(0, 0, 0)
+        );
+    }
+}
+
+@media screen and (max-width: 420px){
+    .op{
+        width: 280px;
+        position: relative;
+        top: 0;
+        border-radius: 100% 100% 0% 0%;
+        filter: drop-shadow(
+            0
+            0
+            12px
+            yellow
+        );
+        animation-name: pao;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+    .texto{
+        position: absolute;
+        top: 27%;
+        left: 10%;
+        transform: translate(-50%,-50%);
+        border-radius: 10px;
+        width: 180px;
+        filter: drop-shadow(
+            0
+            0
+            12px
+            rgb(0, 0, 0)
+        );
+    }
+    
+    .une{
+        position: absolute;
+        top: 27%;
+        left: 90%;
+        transform: translate(-50%,-50%);
+        border-radius: 10px;
+        width: 220px;
+        filter: drop-shadow(
+            0
+            0
+            12px
+            rgb(0, 0, 0)
+        );
     }
 }
